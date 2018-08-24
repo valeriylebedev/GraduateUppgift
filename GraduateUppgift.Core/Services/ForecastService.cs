@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Net.Http;
 using System.Threading.Tasks;
 
@@ -29,7 +30,7 @@ namespace GraduateUppgift.Core.Services
 
             var forecast = JsonConvert.DeserializeObject<ForecastHead>(responseContent);
 
-            return forecast.list;
+            return forecast.list.Take(10);
         }
 
         public class Main
@@ -82,7 +83,7 @@ namespace GraduateUppgift.Core.Services
             public Wind wind { get; set; }
             public Snow snow { get; set; }
             public Sys sys { get; set; }
-            public string dt_txt { get; set; }
+            public DateTime dt_txt { get; set; }
         }
 
         public class Coord

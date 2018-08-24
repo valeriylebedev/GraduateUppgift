@@ -4,8 +4,11 @@ namespace GraduateUppgift.Core.Persistence.Models
 {
     public class Country
     {
-        public int CountryId { get; set; }
-        public string Name { get; set; }
-        public IEnumerable<City> Cities { get; set; }
+        public int id { get; set; }
+        public string namecity { get; set; }
+        public string country { get; set; }
+        public string lon { get; set; }
+        public string lat { get; set; }
+        //public IEnumerable<City> Cities { get; set; }
     }
 }

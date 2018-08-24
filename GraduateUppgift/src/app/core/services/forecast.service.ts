@@ -13,6 +13,8 @@ export class ForecastService {
 
     GetForecast(cityId: number): Observable<any[]> {
       return this.http.get(`api/forecast/${cityId}`)
-        .pipe(map(res => res.json()));
+        .pipe(map(res => 
+          res.json()
+        ));
     }
 }

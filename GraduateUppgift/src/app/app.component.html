@@ -1,8 +1,15 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div style="text-align:center">
   <h1>Welcome graduates!</h1>
-  <input #box value="2673730" disabled="disabled"/>
+  <input #box value=""/>
   <button (click)="onSubmit(box.value)">Get some weather!</button>
-  <p *ngFor="let m of result">{{m.dt_txt}} {{m.main.temp}}</p>
+  <table style="width:100%">
+    <tr *ngFor="let m of result">
+      <td>{{m.date}}</td>
+      <td>{{m.time}}</td>
+      <td>{{m.temperature}}</td>
+    </tr>
+  </table>
+  <!--<p *ngFor="let m of result">{{m.dt_txt}} {{m.main.temp}}</p>-->
 </div>
 

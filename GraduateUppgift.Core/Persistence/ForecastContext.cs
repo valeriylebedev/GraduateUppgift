@@ -5,9 +5,11 @@ namespace GraduateUppgift.Core.Persistence
 {
     public class ForecastContext : DbContext
     {
+        public ForecastContext() : base() { }
+
         public ForecastContext(DbContextOptions options) : base(options) { }
 
-        public DbSet<Country> Countries { get; set; }
+        public virtual DbSet<Country> Countries { get; set; }
 
         //public DbSet<City> Cities { get; set; }
     }
